@@ -3,23 +3,35 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu"
+import { cn } from "@/lib/utils"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false)
 
-  const navItems = [
+  const mainNavItems = [
     { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/blog", label: "Blog" },
-    { href: "/careers", label: "Careers" },
+    { href: "/contact", label: "Contact" },
+  ]
+
+  const industryItems = [
     { href: "/healthcare", label: "Healthcare" },
     { href: "/automotive", label: "Automotive" },
     { href: "/legal", label: "Legal" },
     { href: "/education", label: "Education" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
   ]
 
   return (
@@ -36,17 +48,37 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+            <NavigationMenu>
+              <NavigationMenuList className="flex items-center space-x-1">
+                {mainNavItems.map((item) => (
+                  <NavigationMenuItem key={item.href}>
+                    <Link href={item.href} legacyBehavior passHref>
+                      <NavigationMenuLink className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                        {item.label}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                ))}
+
+                {/* Industries Dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-transparent hover:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent">
+                    Industries
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-48 gap-1 p-2">
+                      {industryItems.map((item) => (
+                        <Link key={item.href} href={item.href} legacyBehavior passHref>
+                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">{item.label}</div>
+                          </NavigationMenuLink>
+                        </Link>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
 
           {/* CTA Button */}
@@ -71,7 +103,8 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navItems.map((item) => (
+              {/* Main Navigation Items */}
+              {mainNavItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -81,6 +114,35 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               ))}
+
+              {/* Industries Section */}
+              <div className="pt-2">
+                <button
+                  onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
+                  className="text-gray-700 hover:text-blue-600 flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Industries
+                  <ChevronDown className={cn("h-4 w-4 transition-transform", isIndustriesOpen && "rotate-180")} />
+                </button>
+                {isIndustriesOpen && (
+                  <div className="pl-4 space-y-1">
+                    {industryItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm font-medium"
+                        onClick={() => {
+                          setIsOpen(false)
+                          setIsIndustriesOpen(false)
+                        }}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <div className="pt-2">
                 <Button asChild className="w-full">
                   <Link href="/contact" onClick={() => setIsOpen(false)}>

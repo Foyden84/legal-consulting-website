@@ -20,6 +20,8 @@ const nextConfig: NextConfig = {
     // 构建时忽略ESLint错误
     ignoreDuringBuilds: true,
   },
+  // Fix for multiple lockfiles warning
+  outputFileTracingRoot: __dirname,
 };
 
 export default nextConfig;
