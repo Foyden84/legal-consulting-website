@@ -9,6 +9,44 @@ import { ArrowRight, Calendar, User, Clock, Eye, Star, TrendingUp } from "lucide
 export default function BlogPage() {
   const featuredPosts = [
     {
+      title: "Transforming Healthcare Delivery with Innovative Software Solutions",
+      excerpt: "Discover how healthcare software solutions are revolutionizing patient care, improving operational efficiency, and enabling digital transformation in medical practices and hospitals.",
+      category: "Healthcare Technology",
+      author: "Dr. Emily Rodriguez, MD",
+      date: "January 20, 2024",
+      readTime: "12 min read",
+      image: "/healthcare.jpg",
+      tags: ["Healthcare", "EHR", "Telemedicine", "Digital Health"],
+      featured: true,
+      url: "/blog/transforming-healthcare-delivery-with-innovative-software-solutions"
+    },
+    {
+      title: "Driving Innovation: Automotive Software Solutions for the Digital Age",
+      excerpt: "Explore how automotive software is transforming fleet management, dealer operations, and connected vehicle experiences in the modern automotive industry.",
+      category: "Automotive Technology",
+      author: "Michael Chen, Automotive Tech Specialist",
+      date: "January 18, 2024",
+      readTime: "10 min read",
+      image: "/automotive.jpg",
+      tags: ["Automotive", "Fleet Management", "Connected Vehicles", "Digital Transformation"],
+      featured: true,
+      url: "/blog/driving-innovation-automotive-software-solutions-for-the-digital-age"
+    }
+  ]
+
+  const recentPosts = [
+    {
+      title: "Revolutionizing Education: Technology Solutions for Modern Learning",
+      excerpt: "Explore how education technology is transforming learning experiences, from K-12 schools to universities, with innovative LMS and assessment tools.",
+      category: "Education Technology",
+      author: "Dr. Sarah Johnson, Ed.D.",
+      date: "January 22, 2024",
+      readTime: "11 min read",
+      image: "/education.jpg",
+      tags: ["Education", "LMS", "EdTech", "Digital Learning"],
+      url: "/blog/revolutionizing-education-technology-solutions-for-modern-learning"
+    },
+    {
       title: "AI-Powered Legal Research: Transforming How Lawyers Find Case Law",
       excerpt: "Discover how artificial intelligence is revolutionizing legal research, making it faster, more accurate, and more comprehensive than ever before.",
       category: "Legal Technology",
@@ -17,7 +55,7 @@ export default function BlogPage() {
       readTime: "8 min read",
       image: "/legal.jpg",
       tags: ["AI", "Legal Research", "Case Law", "Technology"],
-      featured: true
+      url: "/blog/ai-powered-legal-research-transforming-how-lawyers-find-case-law"
     },
     {
       title: "The Complete Guide to Legal Document Automation in 2024",
@@ -28,11 +66,8 @@ export default function BlogPage() {
       readTime: "12 min read",
       image: "/legal.jpg",
       tags: ["Document Automation", "Legal Tech", "Efficiency", "Workflows"],
-      featured: true
-    }
-  ]
-
-  const recentPosts = [
+      url: "/blog/the-complete-guide-to-legal-document-automation-in-2024"
+    },
     {
       title: "Cloud Security for Law Firms: Best Practices and Compliance",
       excerpt: "Essential security measures and compliance requirements for law firms migrating to cloud-based practice management systems.",
@@ -41,7 +76,8 @@ export default function BlogPage() {
       date: "January 8, 2024",
       readTime: "6 min read",
       image: "/legal.jpg",
-      tags: ["Cloud Security", "Compliance", "Data Protection", "Legal Tech"]
+      tags: ["Cloud Security", "Compliance", "Data Protection", "Legal Tech"],
+      url: "/blog/cloud-security-for-law-firms-best-practices-and-compliance"
     },
     {
       title: "Case Management Software: ROI Analysis for Small Law Firms",
@@ -51,7 +87,8 @@ export default function BlogPage() {
       date: "January 5, 2024",
       readTime: "7 min read",
       image: "/legal.jpg",
-      tags: ["Case Management", "ROI", "Small Law Firms", "Efficiency"]
+      tags: ["Case Management", "ROI", "Small Law Firms", "Efficiency"],
+      url: "/blog/case-management-software-roi-analysis-for-small-law-firms"
     },
     {
       title: "E-Discovery in the Digital Age: Tools and Best Practices",
@@ -61,52 +98,24 @@ export default function BlogPage() {
       date: "January 3, 2024",
       readTime: "9 min read",
       image: "/legal.jpg",
-      tags: ["E-Discovery", "Digital Evidence", "Legal Process", "Technology"]
-    },
-    {
-      title: "Client Portal Implementation: Enhancing Legal Service Delivery",
-      excerpt: "How client portals are transforming attorney-client communication and improving service delivery in modern law practices.",
-      category: "Legal Technology",
-      author: "Robert Martinez, J.D.",
-      date: "January 1, 2024",
-      readTime: "10 min read",
-      image: "/legal.jpg",
-      tags: ["Client Portals", "Communication", "Service Delivery", "Legal Tech"]
-    },
-    {
-      title: "Legal Analytics: Using Data to Drive Law Firm Strategy",
-      excerpt: "Explore how legal analytics and business intelligence tools are helping law firms make data-driven decisions.",
-      category: "Legal Technology",
-      author: "Lisa Wang, MBA, J.D.",
-      date: "December 28, 2023",
-      readTime: "8 min read",
-      image: "/legal.jpg",
-      tags: ["Legal Analytics", "Business Intelligence", "Data-Driven", "Strategy"]
-    },
-    {
-      title: "Blockchain for Legal Contracts: Smart Contracts and Beyond",
-      excerpt: "Understanding how blockchain technology is revolutionizing contract management and legal document verification.",
-      category: "Legal Technology",
-      author: "James Thompson, Esq.",
-      date: "December 25, 2023",
-      readTime: "6 min read",
-      image: "/legal.jpg",
-      tags: ["Blockchain", "Smart Contracts", "Legal Innovation", "Technology"]
+      tags: ["E-Discovery", "Digital Evidence", "Legal Process", "Technology"],
+      url: "/blog/e-discovery-in-the-digital-age-tools-and-best-practices"
     }
   ]
 
   const categories = [
     { name: "Legal Technology", count: 18, color: "bg-blue-100 text-blue-800" },
-    { name: "Case Management", count: 12, color: "bg-green-100 text-green-800" },
-    { name: "Document Automation", count: 10, color: "bg-purple-100 text-purple-800" },
-    { name: "Legal Research", count: 8, color: "bg-yellow-100 text-yellow-800" },
-    { name: "Compliance & Security", count: 15, color: "bg-red-100 text-red-800" },
-    { name: "Legal Analytics", count: 7, color: "bg-indigo-100 text-indigo-800" }
+    { name: "Healthcare Technology", count: 8, color: "bg-teal-100 text-teal-800" },
+    { name: "Automotive Technology", count: 6, color: "bg-indigo-100 text-indigo-800" },
+    { name: "Education Technology", count: 5, color: "bg-green-100 text-green-800" },
+    { name: "Case Management", count: 12, color: "bg-purple-100 text-purple-800" },
+    { name: "Compliance & Security", count: 15, color: "bg-red-100 text-red-800" }
   ]
 
   const popularTags = [
-    "Legal AI", "Case Management", "Document Automation", "E-Discovery",
-    "Legal Research", "Client Portals", "Legal Analytics", "Blockchain", "Compliance", "Legal Tech"
+    "Legal AI", "Healthcare", "Automotive", "Education", "Case Management",
+    "Document Automation", "E-Discovery", "EHR", "Fleet Management", "LMS",
+    "Digital Transformation", "Compliance", "Legal Tech", "EdTech"
   ]
 
   const newsletterStats = [
@@ -200,7 +209,7 @@ export default function BlogPage() {
                     ))}
                   </div>
                   <Button asChild>
-                    <Link href={`/blog/${post.title.toLowerCase().replace(/\s+/g, '-').replace(/:/g, '')}`}>
+                    <Link href={post.url || `/blog/${post.title.toLowerCase().replace(/\s+/g, '-').replace(/:/g, '')}`}>
                       Read Article <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -263,7 +272,7 @@ export default function BlogPage() {
                     ))}
                   </div>
                   <Button size="sm" variant="outline" asChild className="w-full">
-                    <Link href={`/blog/${post.title.toLowerCase().replace(/\s+/g, '-').replace(/:/g, '')}`}>
+                    <Link href={post.url || `/blog/${post.title.toLowerCase().replace(/\s+/g, '-').replace(/:/g, '')}`}>
                       Read More
                     </Link>
                   </Button>
