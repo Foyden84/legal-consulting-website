@@ -9,104 +9,104 @@ import { ArrowRight, Calendar, User, Clock, Eye, Star, TrendingUp } from "lucide
 export default function BlogPage() {
   const featuredPosts = [
     {
-      title: "The Future of AI in Healthcare: Transforming Patient Care",
-      excerpt: "Explore how artificial intelligence is revolutionizing healthcare delivery, from diagnostic imaging to personalized treatment plans.",
-      category: "Healthcare",
-      author: "Dr. Sarah Johnson",
-      date: "December 15, 2023",
+      title: "AI-Powered Legal Research: Transforming How Lawyers Find Case Law",
+      excerpt: "Discover how artificial intelligence is revolutionizing legal research, making it faster, more accurate, and more comprehensive than ever before.",
+      category: "Legal Technology",
+      author: "Sarah Mitchell, Esq.",
+      date: "January 15, 2024",
       readTime: "8 min read",
-      image: "/healthcare.jpg",
-      tags: ["AI", "Healthcare", "Innovation", "Technology"],
+      image: "/legal.jpg",
+      tags: ["AI", "Legal Research", "Case Law", "Technology"],
       featured: true
     },
     {
-      title: "Top 10 Software Development Trends for 2024",
-      excerpt: "Stay ahead of the curve with our comprehensive guide to the most important software development trends shaping the industry.",
-      category: "Technology",
-      author: "Michael Chen",
-      date: "December 10, 2023",
+      title: "The Complete Guide to Legal Document Automation in 2024",
+      excerpt: "Learn how document automation is streamlining legal workflows, reducing errors, and improving client service in modern law firms.",
+      category: "Legal Technology",
+      author: "David Rodriguez, J.D.",
+      date: "January 12, 2024",
       readTime: "12 min read",
-      image: "/hero-bg.jpg",
-      tags: ["Development", "Trends", "2024", "Innovation"],
+      image: "/legal.jpg",
+      tags: ["Document Automation", "Legal Tech", "Efficiency", "Workflows"],
       featured: true
     }
   ]
 
   const recentPosts = [
     {
-      title: "Implementing IoT Solutions in the Automotive Industry",
-      excerpt: "Learn how IoT technology is transforming vehicle manufacturing, fleet management, and driver experience.",
-      category: "Automotive",
-      author: "David Kim",
-      date: "December 8, 2023",
+      title: "Cloud Security for Law Firms: Best Practices and Compliance",
+      excerpt: "Essential security measures and compliance requirements for law firms migrating to cloud-based practice management systems.",
+      category: "Legal Technology",
+      author: "Michael Chen, CISSP",
+      date: "January 8, 2024",
       readTime: "6 min read",
-      image: "/automotive.jpg",
-      tags: ["IoT", "Automotive", "Connected Vehicles", "Innovation"]
+      image: "/legal.jpg",
+      tags: ["Cloud Security", "Compliance", "Data Protection", "Legal Tech"]
     },
     {
-      title: "Legal Tech: How Automation is Changing Law Firms",
-      excerpt: "Discover how legal technology is streamlining case management, document automation, and client communication.",
-      category: "Legal",
-      author: "Emily Rodriguez",
-      date: "December 5, 2023",
+      title: "Case Management Software: ROI Analysis for Small Law Firms",
+      excerpt: "A detailed analysis of how case management software can improve efficiency and profitability for small to medium-sized law firms.",
+      category: "Legal Technology",
+      author: "Emily Rodriguez, J.D.",
+      date: "January 5, 2024",
       readTime: "7 min read",
       image: "/legal.jpg",
-      tags: ["Legal Tech", "Automation", "Law Firms", "Efficiency"]
+      tags: ["Case Management", "ROI", "Small Law Firms", "Efficiency"]
     },
     {
-      title: "Building Scalable E-Learning Platforms for Modern Education",
-      excerpt: "Key considerations and best practices for developing robust educational platforms that can scale with growing user bases.",
-      category: "Education",
-      author: "Jennifer Park",
-      date: "December 3, 2023",
+      title: "E-Discovery in the Digital Age: Tools and Best Practices",
+      excerpt: "Navigate the complexities of electronic discovery with modern tools and proven strategies for legal professionals.",
+      category: "Legal Technology",
+      author: "Jennifer Park, Esq.",
+      date: "January 3, 2024",
       readTime: "9 min read",
-      image: "/education.jpg",
-      tags: ["E-Learning", "Education", "Scalability", "Platform Development"]
+      image: "/legal.jpg",
+      tags: ["E-Discovery", "Digital Evidence", "Legal Process", "Technology"]
     },
     {
-      title: "Cloud Migration Strategies for Healthcare Organizations",
-      excerpt: "A comprehensive guide to planning and executing successful cloud migrations while maintaining HIPAA compliance.",
-      category: "Healthcare",
-      author: "Robert Martinez",
-      date: "December 1, 2023",
+      title: "Client Portal Implementation: Enhancing Legal Service Delivery",
+      excerpt: "How client portals are transforming attorney-client communication and improving service delivery in modern law practices.",
+      category: "Legal Technology",
+      author: "Robert Martinez, J.D.",
+      date: "January 1, 2024",
       readTime: "10 min read",
-      image: "/healthcare.jpg",
-      tags: ["Cloud", "Healthcare", "Migration", "HIPAA", "Compliance"]
+      image: "/legal.jpg",
+      tags: ["Client Portals", "Communication", "Service Delivery", "Legal Tech"]
     },
     {
-      title: "The Rise of Electric Vehicle Software Development",
-      excerpt: "Exploring the software challenges and opportunities in the rapidly growing electric vehicle market.",
-      category: "Automotive",
-      author: "Lisa Wang",
-      date: "November 28, 2023",
+      title: "Legal Analytics: Using Data to Drive Law Firm Strategy",
+      excerpt: "Explore how legal analytics and business intelligence tools are helping law firms make data-driven decisions.",
+      category: "Legal Technology",
+      author: "Lisa Wang, MBA, J.D.",
+      date: "December 28, 2023",
       readTime: "8 min read",
-      image: "/automotive.jpg",
-      tags: ["Electric Vehicles", "Software Development", "Automotive", "Innovation"]
+      image: "/legal.jpg",
+      tags: ["Legal Analytics", "Business Intelligence", "Data-Driven", "Strategy"]
     },
     {
-      title: "Blockchain Applications in Legal Document Management",
-      excerpt: "How blockchain technology is enhancing security, transparency, and efficiency in legal document handling.",
-      category: "Legal",
-      author: "James Thompson",
-      date: "November 25, 2023",
+      title: "Blockchain for Legal Contracts: Smart Contracts and Beyond",
+      excerpt: "Understanding how blockchain technology is revolutionizing contract management and legal document verification.",
+      category: "Legal Technology",
+      author: "James Thompson, Esq.",
+      date: "December 25, 2023",
       readTime: "6 min read",
       image: "/legal.jpg",
-      tags: ["Blockchain", "Legal", "Document Management", "Security"]
+      tags: ["Blockchain", "Smart Contracts", "Legal Innovation", "Technology"]
     }
   ]
 
   const categories = [
-    { name: "Healthcare", count: 12, color: "bg-blue-100 text-blue-800" },
-    { name: "Automotive", count: 8, color: "bg-green-100 text-green-800" },
-    { name: "Legal", count: 6, color: "bg-purple-100 text-purple-800" },
-    { name: "Education", count: 9, color: "bg-yellow-100 text-yellow-800" },
-    { name: "Technology", count: 15, color: "bg-red-100 text-red-800" },
-    { name: "Business", count: 7, color: "bg-indigo-100 text-indigo-800" }
+    { name: "Legal Technology", count: 18, color: "bg-blue-100 text-blue-800" },
+    { name: "Case Management", count: 12, color: "bg-green-100 text-green-800" },
+    { name: "Document Automation", count: 10, color: "bg-purple-100 text-purple-800" },
+    { name: "Legal Research", count: 8, color: "bg-yellow-100 text-yellow-800" },
+    { name: "Compliance & Security", count: 15, color: "bg-red-100 text-red-800" },
+    { name: "Legal Analytics", count: 7, color: "bg-indigo-100 text-indigo-800" }
   ]
 
   const popularTags = [
-    "AI & Machine Learning", "Cloud Computing", "Cybersecurity", "Mobile Development",
-    "Web Development", "Data Analytics", "IoT", "Blockchain", "DevOps", "UX/UI Design"
+    "Legal AI", "Case Management", "Document Automation", "E-Discovery",
+    "Legal Research", "Client Portals", "Legal Analytics", "Blockchain", "Compliance", "Legal Tech"
   ]
 
   const newsletterStats = [
@@ -128,7 +128,7 @@ export default function BlogPage() {
               <span className="block text-yellow-400">Blog</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Insights, trends, and expert perspectives on software development, technology, and digital transformation across industries.
+              Expert insights on legal technology, case management, document automation, and digital transformation for law firms and legal departments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-yellow-400 text-gray-900 hover:bg-yellow-300">
@@ -148,7 +148,7 @@ export default function BlogPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Posts</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our most popular and insightful articles selected by our editorial team
+              Essential reading for legal professionals looking to leverage technology for better outcomes
             </p>
           </div>
           
@@ -217,7 +217,7 @@ export default function BlogPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Recent Posts</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay updated with our latest insights and industry analysis
+              Latest developments in legal technology and practical implementation guides
             </p>
           </div>
           
@@ -353,7 +353,7 @@ export default function BlogPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Want to Contribute?</h2>
           <p className="text-xl mb-8 text-gray-300">
-            We're always looking for industry experts and thought leaders to share their insights
+            We're always looking for legal technology experts and thought leaders to share their insights
           </p>
           <Button size="lg" asChild className="bg-yellow-400 text-gray-900 hover:bg-yellow-300">
             <Link href="/contact">Become a Contributor</Link>
