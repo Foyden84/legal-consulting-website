@@ -52,11 +52,11 @@ export default function Navigation() {
               <NavigationMenuList className="flex items-center space-x-1">
                 {mainNavItems.map((item) => (
                   <NavigationMenuItem key={item.href}>
-                    <Link href={item.href} legacyBehavior passHref>
-                      <NavigationMenuLink className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                    <NavigationMenuLink asChild>
+                      <Link href={item.href} className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                         {item.label}
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                 ))}
 
@@ -68,11 +68,11 @@ export default function Navigation() {
                   <NavigationMenuContent>
                     <div className="grid w-48 gap-1 p-2">
                       {industryItems.map((item) => (
-                        <Link key={item.href} href={item.href} legacyBehavior passHref>
-                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <NavigationMenuLink key={item.href} asChild>
+                          <Link href={item.href} className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">{item.label}</div>
-                          </NavigationMenuLink>
-                        </Link>
+                          </Link>
+                        </NavigationMenuLink>
                       ))}
                     </div>
                   </NavigationMenuContent>
